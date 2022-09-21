@@ -80,11 +80,35 @@ const loadQuestion = () => {
     quizIndex++
     console.log('datacorrec:', data.correct);
 }
-console.log("quizIndex", quizIndex)
+// console.log("quizIndex", quizIndex)
 
 
 loadQuestion()
 
+
+// const disAble = () => {
+//     allOptions.forEach(
+//         (option) => {
+//             if (!option.checked) {
+//                 option.setAttribute("disabled", true)
+//             }
+//         }
+//     )
+// }
+
+// const enAble = () => {
+//     allOptions.forEach(
+//         (option) => {
+//             if (option) {
+//                 option.setAttribute("editable", true)
+//                 // option.setAttribute("disabled", false)
+
+//                 console.log(option)
+//             }
+//         }
+//     )
+// }
+// enAble()
 
 
 const submitQuestion = () => {
@@ -100,10 +124,10 @@ const submitQuestion = () => {
         selectedQuizResult = document.getElementById('selectedQuizResult').innerHTML = `<p>Wrong &#128148; !!</p>`
         incorrect++
     }
-    console.log('answer:', answer, 'datacorrec:', data.correct);
+    // console.log('answer:', answer, 'datacorrec:', data.correct);
 
     allProgressB = document.getElementById('progressBar').value = `${(totalPercent / totalQuiz) * quizIndex}`;
-    console.log('percetage of progress', allProgressB)
+    // console.log('percetage of progress', allProgressB)
 
 
     topMaxScore = document.getElementById('topMaxScore').innerHTML = `Max Score ${(totalPercent - (totalPercent / totalQuiz) * incorrect)}%`;
@@ -126,6 +150,7 @@ const submitQuestion = () => {
     // console.log("quizIndex", quizIndex)
 
     index++
+
     loadQuestion()
     reset()
 }
@@ -141,13 +166,14 @@ const getAnswer = () => {
         (inputEl) => {
             if (inputEl.checked) {
                 ans = inputEl.value;
-                console.log('inputEl.checked:', inputEl.checked);
+                // console.log('inputEl.checked:', inputEl.checked);
                 // console.log('allOptions:', allOptions);
+
 
             }
         }
     )
-    console.log('ans:', ans);
+    // console.log('ans:', ans);
     return ans;
 }
 

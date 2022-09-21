@@ -94,10 +94,10 @@ const submitQuestion = () => {
 
     if (answer == data.correct) {
         correct++
-        selectedQuizResult = document.getElementById('selectedQuizResult').innerHTML = `<p>Correct</p>`
+        selectedQuizResult = document.getElementById('selectedQuizResult').innerHTML = `<p>Correct &#127881; !!</p>`
     }
     else {
-        selectedQuizResult = document.getElementById('selectedQuizResult').innerHTML = `<p>Wrong !!</p>`
+        selectedQuizResult = document.getElementById('selectedQuizResult').innerHTML = `<p>Wrong &#128148; !!</p>`
         incorrect++
     }
     console.log('answer:', answer, 'datacorrec:', data.correct);
@@ -178,5 +178,7 @@ const reset = () => {
 
 const endQuiz = () => {
     const result = document.getElementById('endResult');
-    result.innerHTML = `<h2> You have complete the Quiz your Score is ${correct} into ${allOptions.length} </h2>`
+    result.innerHTML = `<h2> You have complete the Quiz your Score is ${progressB} into 100% </h2> <hr/>
+    <h2> Your Correct Answer is ${correct} <span style='font-size:50px;'>&#128150;</span>  </h2>  <hr/>
+    <h2> Your Correct Answer is ${incorrect} <span style='font-size:50px;'>&#128533;</span>  </h2>  <hr/> `
 }

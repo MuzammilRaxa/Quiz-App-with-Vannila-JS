@@ -1,0 +1,157 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(68 87 96);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quizContainer {
+    background-color: rgb(255 255 255);
+    height: 65%;
+    width: 500px;
+    border: 2px solid rgb(255 255 255);
+    border-radius: 5px;
+    padding: 3px 30px;
+    box-shadow: 0 2px 6px 0 rgba(23, 23, 23, 0.32);
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: space-between;
+
+
+}
+
+/* #endResult {
+    font-size: 10px;
+} */
+
+#progressBar {
+    height: 4px;
+    width: 100%;
+}
+
+#scoreBox {
+    /* background-color: rgb(190, 212, 252); */
+    border-radius: 10px;
+    padding: 0px 3px;
+    margin-bottom: 2px;
+    font-size: 10px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 
+#scoreBoxB {
+    border-radius: 10px;
+    padding: 0px 3px;
+    margin-bottom: 3px;
+    font-size: small;
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-between;
+} */
+
+#hQuestion {
+    font-size: 1.4rem;
+    margin-bottom: 0%;
+}
+
+.questionBox {
+    width: 100%;
+    font-size: 1rem;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+#questionB {
+    width: 100%;
+    font-size: 1rem;
+    padding: 5px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(23, 23, 23, 0.32);
+
+}
+
+/* .optionRow {
+    background-color: bisque;
+    
+} */
+
+.optionRow {
+    font-size: large;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    /* border: 1px solid rgba(23, 23, 23, 0.32);
+    border-radius: 5px; */
+
+}
+
+
+
+#nextBtn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submitBtn {
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 10px;
+
+}
+
+#btn {
+    width: 100%;
+    font-size: large;
+    outline: none;
+    border: 2px solid rgba(23, 23, 23, 0.32);
+    border-radius: 10px;
+    background-color: rgb(255 255 255);
+    cursor: pointer;
+    /* margin-bottom: 20px; */
+}
+
+#btn :hover {
+    background-color: rgb(104, 104, 218);
+}
+
+.footer {
+    margin-top: 10px !important;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+
+
+/* .progressB {
+    min-width: 10px !important;
+} */
+
+#progressB {
+    font-size: 15px;
+}
+
+#progressBarRed {
+    background-color: rgba(255, 0, 0, 0.63);
+    font-size: 10px;
+}
+
+#progressMaxScore {
+    background-color: rgb(167, 167, 167);
+    font-size: 8px;
+}

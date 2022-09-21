@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="main">
+
+
+        <div class="quizContainer" id="endResult">
+            <header>
+                <div id="scoreBox">
+                    <span id="topScore">Score</span>
+                    <span id="topMaxScore">Max Score</span>
+                </div>
+
+
+                <div class="progress" style="height: 3px;">
+                    <progress id="progressBar" value="5" max="100"></progress>
+                </div>
+
+                <div class="questionBox">
+                    <h1 id="hQuestion">Question:</h1>
+                    <h2 id="questionB"> 1) This is Dummy Question ? </h2>
+                </div>
+            </header>
+
+            <div class="allOptions">
+                <div class="optionRow">
+                    <input class="option" type="radio" value="a" id="option1" name="option">
+                    <label for="option1">Option 1</label>
+                </div>
+                <div class="optionRow">
+                    <input class="option" type="radio" value="b" id="option2" name="option">
+                    <label for="option2">Option 1</label>
+                </div>
+                <div class="optionRow">
+                    <input class="option " type="radio" value="c" id="option3" name="option">
+                    <label for="option3">Option 1</label>
+                </div>
+                <div class="optionRow">
+                    <input class="option" type="radio" value="d" id="option4" name="option">
+                    <label for="option4">Option 1</label>
+                </div>
+            </div>
+
+            <div>
+                <h1 id="result"></h1>
+            </div>
+
+            <div class="footer">
+                <div id="nextBtn">
+                    <button onclick="nextQuestion()">Next</button>
+                </div>
+                <div id="selectedQuizResult">
+
+                </div>
+
+                <div class="submitBtn">
+                    <button id="btn" onclick="submitQuestion()">submit</button>
+                </div>
+
+                <!-- <div id="scoreBox">
+                    <span id="topScore">Score</span>
+                    <span id="topMaxScore">Max Score</span>
+                </div> -->
+
+                <div class="progress" style="height: 20px;">
+                    <div id="progressB" class="progress-bar " role="progressbar" aria-label="Example 20px high"
+                        style="width: 0%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">score</div>
+                    <div id="progressBarRed" class="progress-bar " role="progressbar" aria-label="Example 20px high"
+                        style="width: 0%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Less</div>
+                    <div id="progressMaxScore" class="progress-bar " role="progressbar" aria-label="Example 20px high"
+                        style="width: 0%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Max</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -56,6 +56,7 @@ let maxScore;
 let topScore;
 let topMaxScore;
 let selectedQuizResult;
+let nextBtn;
 // let allProgressB = document.getElementById('file');
 // console.log(startQuiz)
 
@@ -93,7 +94,7 @@ const submitQuestion = () => {
 
     if (answer == data.correct) {
         correct++
-        selectedQuizResult = document.getElementById('selectedQuizResult').innerHTML = `<h1>Correct</h1>`
+        selectedQuizResult = document.getElementById('selectedQuizResult').innerHTML = `<p>Correct</p>`
     }
     else {
         incorrect++
@@ -124,13 +125,13 @@ const submitQuestion = () => {
     // console.log("quizIndex", quizIndex)
 
     index++
-    // nextQuestion()
+    loadQuestion()
     reset()
 }
 
-const nextQuestion = () => {
-    loadQuestion()
-}
+// const nextQuestion = () => {
+//     nextBtn = document.getElementById('nextBtn').addEventListener(click, nextQuestion)
+// }
 
 
 const getAnswer = () => {

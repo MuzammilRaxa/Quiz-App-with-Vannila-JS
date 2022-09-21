@@ -96,9 +96,11 @@
 
 }
 
+#selectedQuizResult {
+    font-size: 1.3rem;
+}
 
-
-#nextBtn {
+#nBtn {
     display: flex;
     justify-content: flex-end;
 }

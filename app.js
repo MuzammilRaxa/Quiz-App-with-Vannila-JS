@@ -97,6 +97,7 @@ const submitQuestion = () => {
         selectedQuizResult = document.getElementById('selectedQuizResult').innerHTML = `<p>Correct</p>`
     }
     else {
+        selectedQuizResult = document.getElementById('selectedQuizResult').innerHTML = `<p>Rong !!</p>`
         incorrect++
     }
     console.log('answer:', answer, 'datacorrec:', data.correct);

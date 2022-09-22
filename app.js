@@ -204,7 +204,7 @@ const reset = () => {
 
 const endQuiz = () => {
     const result = document.getElementById('endResult');
-    result.innerHTML = `<h2> You have complete the Quiz your Score is ${progressB} into 100% </h2> <hr/>
-    <h2> Your Correct Answer is ${correct} <span style='font-size:50px;'>&#128150;</span>  </h2>  <hr/>
-    <h2> Your Correct Answer is ${incorrect} <span style='font-size:50px;'>&#128533;</span>  </h2>  <hr/> `
+    result.innerHTML = `<h2 style="background-color:rgb(177, 204, 255)" > You have complete the Quiz your Score is ${progressB} into 100% </h2> <hr/>
+    <h2 style="background-color:aquamarine" > Your Correct Answer is ${correct} <span style='font-size:50px;'>&#128150;</span>  </h2>  <hr/>
+    <h2 style="background-color:red" > Your Correct Answer is ${incorrect} <span style='font-size:50px;'>&#128533;</span>  </h2>  <hr/> `
 }

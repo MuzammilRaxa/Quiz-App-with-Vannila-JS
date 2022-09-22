@@ -107,6 +107,7 @@
     /* align-items: flex-start; */
     align-content: center;
     background-color: aquamarine;
+    border-radius: 6px;
 }
 
 .optionRow:hover {

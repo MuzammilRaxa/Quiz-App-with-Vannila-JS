@@ -43,6 +43,7 @@ let incorrect = 0;
 let totalPercent = 100;
 
 let progressNum = '100px';
+const headQuestion = document.getElementById('hQuestion');
 const questionBox = document.getElementById('questionB');
 const allOptions = document.querySelectorAll("input[type='radio']");
 const startQuiz = document.getElementById('endResult');
@@ -69,6 +70,8 @@ const loadQuestion = () => {
     if (quizIndex == totalQuiz) {
         return endQuiz();
     }
+
+    headQuestion.innerHTML = `<h1 id="hQuestion">Question: ${quizIndex + 1} into ${totalQuiz}</h1>`
 
     const data = allQuiz[quizIndex]
     questionBox.innerHTML = `${data.question}`

@@ -68,9 +68,9 @@ let btnHide;
 const radioButton = document.querySelectorAll(".optionRow")
 
 
-radioButton.forEach((button) => {
-    console.log(button)
-})
+// radioButton.forEach((button) => {
+//     console.log(button)
+// })
 
 
 const loadQuestion = () => {
@@ -92,7 +92,7 @@ const loadQuestion = () => {
     allOptions[2].nextElementSibling.innerHTML = data.c;
     allOptions[3].nextElementSibling.innerHTML = data.d;
     quizIndex++
-    console.log('datacorrec:', data.correct);
+    // console.log('datacorrec:', data.correct);
 }
 // console.log("quizIndex", quizIndex)
 
@@ -110,6 +110,21 @@ const disAble = () => {
             }
 
             btnEnable = document.getElementById('btn').style.display = 'block';
+
+
+            const data = allQuiz[index];
+            const answer = getAnswer();
+
+            if (answer == data.correct) {
+                selectedQuizResult = document.getElementById('selectedQuizResult').innerHTML = `<p>Correct &#127881; !!</p>`
+                selectedQuizResult = document.getElementById('selectedQuizResult').style.display = 'block'
+                // correct++
+            }
+            else {
+                selectedQuizResult = document.getElementById('selectedQuizResult').innerHTML = `<p>Wrong &#128148; !!</p>`
+                selectedQuizResult = document.getElementById('selectedQuizResult').style.display = 'block'
+                // incorrect++
+            }
 
             // if (option.checked == data.correct) {
             //     correct++
@@ -130,7 +145,7 @@ const enAble = () => {
         (option) => {
 
             option.removeAttribute("disabled", true)
-            console.log(option)
+            selectedQuizResult = document.getElementById('selectedQuizResult').style.display = 'none'
 
         }
     )
@@ -138,17 +153,21 @@ const enAble = () => {
 enAble()
 
 const submitQuestion = () => {
+
+
     const data = allQuiz[index];
     const answer = getAnswer();
 
     if (answer == data.correct) {
+        // selectedQuizResult = document.getElementById('selectedQuizResult').innerHTML = `<p>Correct &#127881; !!</p>`
         correct++
-        selectedQuizResult = document.getElementById('selectedQuizResult').innerHTML = `<p>Correct &#127881; !!</p>`
     }
     else {
-        selectedQuizResult = document.getElementById('selectedQuizResult').innerHTML = `<p>Wrong &#128148; !!</p>`
+        // selectedQuizResult = document.getElementById('selectedQuizResult').innerHTML = `<p>Wrong &#128148; !!</p>`
         incorrect++
     }
+
+    console.log("correct:", correct, "incorrect:", incorrect)
     // console.log('answer:', answer, 'datacorrec:', data.correct);
 
     allProgressB = document.getElementById('progressBar').value = `${(totalPercent / totalQuiz) * quizIndex}`;

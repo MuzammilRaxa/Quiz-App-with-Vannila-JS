@@ -156,6 +156,7 @@ label:hover {
 
 #selectedQuizResult {
     font-size: 1.3rem;
+    display: none;
 }
 
 /* 
@@ -185,7 +186,7 @@ label:hover {
     /* margin-bottom: 20px; */
     transition: .3s;
     display: none;
-    
+
 }
 
 #btn:hover {

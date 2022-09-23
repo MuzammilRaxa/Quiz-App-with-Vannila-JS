@@ -58,14 +58,25 @@ let topScore;
 let topMaxScore;
 let selectedQuizResult;
 let nextBtn;
+let test;
+let btnEnable;
+let btnHide;
 // let allProgressB = document.getElementById('file');
 // console.log(startQuiz)
 
 
+const radioButton = document.querySelectorAll(".optionRow")
 
+
+radioButton.forEach((button) => {
+    console.log(button)
+})
 
 
 const loadQuestion = () => {
+
+
+    btnHide = document.getElementById('btn').style.display = 'none';
 
     if (quizIndex == totalQuiz) {
         return endQuiz();
@@ -89,33 +100,44 @@ const loadQuestion = () => {
 loadQuestion()
 
 
-// const disAble = () => {
-//     allOptions.forEach(
-//         (option) => {
-//             if (!option.checked) {
-//                 option.setAttribute("disabled", true)
-//             }
-//         }
-//     )
-// }
 
-// const enAble = () => {
-//     allOptions.forEach(
-//         (option) => {
-//             if (option) {
-//                 option.setAttribute("editable", true)
-//                 // option.setAttribute("disabled", false)
+const disAble = () => {
+    allOptions.forEach(
+        (option) => {
 
-//                 console.log(option)
-//             }
-//         }
-//     )
-// }
-// enAble()
+            if (!option.checked) {
+                option.setAttribute("disabled", true)
+            }
 
+            btnEnable = document.getElementById('btn').style.display = 'block';
+
+            // if (option.checked == data.correct) {
+            //     correct++
+            //     selectedQuizResult = document.getElementById('selectedQuizResult').innerHTML = `<p>Correct &#127881; !!</p>`
+            // }
+            // else {
+            //     selectedQuizResult = document.getElementById('selectedQuizResult').innerHTML = `<p>Wrong &#128148; !!</p>`
+            //     incorrect++
+            // }
+
+        }
+    )
+}
+
+
+const enAble = () => {
+    allOptions.forEach(
+        (option) => {
+
+            option.removeAttribute("disabled", true)
+            console.log(option)
+
+        }
+    )
+}
+enAble()
 
 const submitQuestion = () => {
-
     const data = allQuiz[index];
     const answer = getAnswer();
 
@@ -153,6 +175,8 @@ const submitQuestion = () => {
     // console.log("quizIndex", quizIndex)
 
     index++
+
+    enAble();
 
     loadQuestion()
     reset()
@@ -207,7 +231,9 @@ const reset = () => {
 
 const endQuiz = () => {
     const result = document.getElementById('endResult');
-    result.innerHTML = `<h2 style="background-color:rgb(177, 204, 255)" > You have complete the Quiz your Score is ${progressB} into 100% </h2> <hr/>
-    <h2 style="background-color:aquamarine" > Your Correct Answer is ${correct} <span style='font-size:50px;'>&#128150;</span>  </h2>  <hr/>
-    <h2 style="background-color:red" > Your Correct Answer is ${incorrect} <span style='font-size:50px;'>&#128533;</span>  </h2>  <hr/> `
+    result.innerHTML = `
+    <h2 style="background-color:rgb(177, 204, 255)" > You have complete the Quiz your Score is ${progressB} into 100%           </h2> <hr/>
+    <h2 style="background-color:aquamarine" > Your Correct Answer is ${correct} <span style='font-size:50px;'>&#128150;</span>  </h2> <hr/>
+    <h2 style="background-color:red" > Your Correct Answer is ${incorrect} <span style='font-size:50px;'>&#128533;</span>       </h2> <hr/>
+    `
 }

@@ -184,7 +184,8 @@ label:hover {
     cursor: pointer;
     /* margin-bottom: 20px; */
     transition: .3s;
-
+    display: none;
+    
 }
 
 #btn:hover {
